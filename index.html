@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>W3.CSS Template</title>
+<title>Tuscana</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="w3schools.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="flexbox.css" />
@@ -83,7 +83,7 @@ body, html {
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-xxlarge w3-text-white w3-wide">Bike Trips</span>
+    <span class="w3-xxlarge w3-text-dark-grey w3-wide">Tuscany 2023</span>
   </div>
 </div>
 
@@ -147,7 +147,7 @@ body, html {
     <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
   </div>
 </div>
-<div class="container">
+<div class="container" id="portfolio">
   <h2 class="heading-text">Responsive <span>image gallery</span></h2>
   <div class="image-gallery">
     <div class="column">
@@ -156,7 +156,7 @@ body, html {
         <div class="overlay"><span>Image title</span></div>
       </div>
       <div class="image-item">
-        <img src="/media/IMG_0587 Large.jpeg" alt="" />
+        <img src="/media/IMG_0587 Large.jpeg" onclick="onClick(this)" class="w3-hover-opacity" alt="" />
         <div class="overlay"><span>Image title</span></div>
       </div>
       <div class="image-item">
