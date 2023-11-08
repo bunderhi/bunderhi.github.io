@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="flexbox.css" />
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html {
@@ -43,64 +44,6 @@ body, html {
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
-
-.gallery {
-	display: flex;
-	padding: 2px;
-	transition: .3s;
-	
-	&:hover &__image {
-		filter: grayscale(1);
-	}
-	
-	&__column {
-		display: flex;
-		flex-direction: column;
-		width: 25%;
-	}
-	
-	&__link {
-		margin: 2px;
-		overflow: hidden;
-		
-		&:hover {
-			.gallery__image {
-				filter: grayscale(0);
-			}
-			
-			.gallery__caption {
-				opacity: 1;
-			}
-		}
-	}
-	
-	&__thumb {
-		position: relative;
-	}
-	
-	&__image {
-		display: block;
-		width: 100%;
-		transition: .3s;
-		
-		&:hover {
-			transform: scale(1.1);
-		}
-	}
-	
-	&__caption {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		padding: 25px 15px 15px;
-		width: 100%;
-		font-size: 16px;
-		color: white;
-		opacity: 0;
-		background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255 ,255 , 0) 100%);
-		transition: .3s;
-	}
-}
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1600px) {
@@ -204,51 +147,57 @@ body, html {
     <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
   </div>
 </div>
-
-<!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
-
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
-      <img src="/media/IMG_0062 Large.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
+<div class="container">
+  <h2 class="heading-text">Responsive <span>image gallery</span></h2>
+  <div class="image-gallery">
+    <div class="column">
+      <div class="image-item">
+        <img src="/media/IMG_0062 Large.jpeg" alt="" />
+        <div class="overlay"><span>Image title</span></div>
+      </div>
+      <div class="image-item">
+        <img src="/media/IMG_0587 Large.jpeg" alt="" />
+        <div class="overlay"><span>Image title</span></div>
+      </div>
+      <div class="image-item">
+        <img src="/media/IMG_0503 Large.jpeg" alt="" />
+        <div class="overlay"><span>Image title</span></div>
+      </div>
     </div>
-
-    <div class="w3-col m3">
-      <img src="/media/IMG_0587 Large.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
+    <div class="column">
+      <div class="image-item">
+        <img src="/media/IMG_0496 Large.jpeg" alt="" />
+        <div class="overlay"><span>Image title</span></div>
+      </div>
+      <div class="image-item">
+        <img src="/media/IMG_0560 Large.jpeg" alt="" />
+        <div class="overlay"><span>Image title</span></div>
+      </div>
+      <div class="image-item">
+        <img src="/media/IMG_0561 Large.jpeg" alt="" />
+        <div class="overlay"><span>Image title</span></div>
+      </div>
     </div>
-
-    <div class="w3-col m3">
-      <img src="/media/IMG_0503 Large.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
+    <div class="column">
+      <div class="image-item">
+        <img src="/media/IMG_0559 Large.jpeg" alt="" />
+        <div class="overlay"><span>Image title</span></div>
+      </div>
+      <div class="image-item">
+        <img src="/media/IMG_0554 Large.jpeg" alt="" />
+        <div class="overlay"><span>Image title</span></div>
+      </div>
+      <div class="image-item">
+        <img src="/media/IMG_0554 Large.jpeg" alt="" />
+        <div class="overlay"><span>Image title</span></div>
+      </div>
+      <div class="image-item">
+        <img src="/media/IMG_0554 Large.jpeg" alt="" />
+        <div class="overlay"><span>Image title</span></div>
+      </div>
     </div>
-
-    <div class="w3-col m3">
-      <img src="/media/IMG_0496 Large.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
-    </div>
-  </div>
-
-  <div class="w3-row-padding w3-center w3-section">
-    <div class="w3-col m3">
-      <img src="/media/IMG_0560 Large.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="/media/IMG_0561 Large.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="/media/IMG_0559 Large.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="/media/IMG_0554 Large.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
-    </div>
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
   </div>
 </div>
-
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
   <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
@@ -256,100 +205,6 @@ body, html {
     <img id="img01" class="w3-image">
     <p id="caption" class="w3-opacity w3-large"></p>
   </div>
-</div>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
-<div class="gallery">
-	<div class="gallery__column">
-		<a href="https://unsplash.com/@jeka_fe" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/_cvwXhGqG-o/300x300" alt="Portrait by Jessica Felicio" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Jessica Felicio</figcaption>
-			</figure>
-		</a>
-
-		<a href="https://unsplash.com/@oladimeg" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/AHBvAIVqk64/300x500" alt="Portrait by Oladimeji Odunsi" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Oladimeji Odunsi</figcaption>
-			</figure>
-		</a>
-
-		<a href="https://unsplash.com/@a2eorigins" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/VLPLo-GtrIE/300x300" alt="Portrait by Alex Perez" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Alex Perez</figcaption>
-			</figure>
-		</a>
-	</div>
-	
-	<div class="gallery__column">
-		<a href="https://unsplash.com/@hikiapp" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/A9rQeI2AdR4/300x300" alt="Portrait by Hikiapp" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Hikiapp</figcaption>
-			</figure>
-		</a>
-		
-		<a href="https://unsplash.com/@von_co" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/dnL6ZIpht2s/300x300" alt="Portrait by Ivana Cajina" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Ivana Cajina</figcaption>
-			</figure>
-		</a>
-
-		<a href="https://unsplash.com/@j_erhunse" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/vp9mRauo68c/300x500" alt="Portrait by Jeffery Erhunse" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Jeffery Erhunse</figcaption>
-			</figure>
-		</a>
-	</div>
-	
-	<div class="gallery__column">
-		<a href="https://unsplash.com/@marilezhava" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/Xm9-vA_bhm0/300x500" alt="Portrait by Mari Lezhava" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Mari Lezhava</figcaption>
-			</figure>
-		</a>
-		
-		<a href="https://unsplash.com/@ethanhaddox" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/NTjSR3zYpsY/300x300" alt="Portrait by Ethan Haddox" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Ethan Haddox</figcaption>
-			</figure>
-		</a>
-
-		<a href="https://unsplash.com/@mr_geshani" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/2JH8d3ChNec/300x300" alt="Portrait by Amir Geshani" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Amir Geshani</figcaption>
-			</figure>
-		</a>
-	</div>
-	
-	<div class="gallery__column">
-		<a href="https://unsplash.com/@nixcreative" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/sh3LSNbyj7k/300x300" alt="Portrait by Tyler Nix" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Tyler Nix</figcaption>
-			</figure>
-		</a>
-
-		<a href="https://unsplash.com/@majestical_jasmin" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/OQd9zONSx7s/300x300" alt="Portrait by Jasmin Chew" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Jasmin Chew</figcaption>
-			</figure>
-		</a>
-		
-		<a href="https://unsplash.com/@dimadallacqua" target="_blank" class="gallery__link">
-			<figure class="gallery__thumb">
-				<img src="https://source.unsplash.com/XZkEhowjx8k/300x500" alt="Portrait by Dima DallAcqua" class="gallery__image">
-				<figcaption class="gallery__caption">Portrait by Dima DallAcqua</figcaption>
-			</figure>
-		</a>
-	</div>
 </div>
 
 <!-- Third Parallax Image with Portfolio Text -->
