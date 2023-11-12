@@ -1,5 +1,18 @@
 /* Responsive image gallery rules begin*/
 
+.container {
+  padding: 40px 5%;
+}
+
+.heading-text {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.heading-text span {
+  font-weight: 100;
+}
+
 .image-gallery {
     /* Mobile first */
     display: flex;
