@@ -1,0 +1,60 @@
+/* 
+body, figure, h1, h2, h3, p, div {
+    margin: 0;
+    padding: 0;
+}
+*/
+
+/* Set the video container to be responsive */
+.video-container {
+    position: relative;
+    width: 100%;
+    /* max-width: 800px;  */
+    margin: auto;
+}
+
+/* Style the video */
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Apply specific styles for different screen sizes using media queries */
+
+/* For screens larger than 1024px, enable autoplay */
+
+@media (min-width: 1200px) {
+    video {
+        /* Add specific styles for larger screens */
+        width: 100%;
+        height: auto;
+        display: block;
+        autoplay: true;
+        muted: false;
+        controls: false;
+    }
+}
+
+
+/*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Video Embed</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="video-container">
+    <video controls>
+        <source src="your-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+</body>
+</html>
+*/

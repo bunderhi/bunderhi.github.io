@@ -49,11 +49,38 @@ body, html {
     padding-top: 50px; 
 }
 
+/* Set the video container to be responsive */
+.video-container {
+    position: relative;
+    width: 100%;
+    /* max-width: 800px;  */
+    margin: auto;
+}
+
+/* Style the video */
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 1200px) {
+    video {
+        /* Add specific styles for small screens */
+        width: 100%;
+        height: auto;
+        display: block;
+        autoplay: false;
+        muted: false;
+        controls: true;
+    }
+}
+
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
 /* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
+@media only screen and (max-width: 1200px) {
   .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: scroll;
     min-height: 400px;
@@ -91,12 +118,11 @@ body, html {
 </div> 
 <div class="w3-content w3-container w3-padding-64" id="about">
     <h3 class="w3-center">Tuscany 2023 Trip</h3>
-    <p>This trip was all about cycling The Tuscan countryside. We stayed in the center of Tuscany near a world-heritage medieval
-     village called San Gimignano. We stayed in Mormoraia Agriturismo located just outside the village. Mormoraia is a working 
-     farm with a winery and olive oil production. We drank their excellent wine and ate their olive oil every day.
+    <p>This trip was all about cycling the Tuscan countryside. Our homebase was Mormoraia Agriturismo in the center of Tuscany near a very cool medieval
+      village called San Gimignano.  Mormoraia is a working farm with a five star winery and olive oil production. We drank their 
+      wine and eat their olive oil every day.
     </p>
-    <p>Click on photos for more details
-     </p>
+    <p><em>Click on the photos for more details</em></p>
 </div>
 <div class="w3-container w3-content">
     <div class="image-gallery">
@@ -107,7 +133,7 @@ body, html {
         </div>
         <div class="image-item">
           <img src="/media/IMG_0503 Agro.jpeg" onclick="onClick(this)" class="w3-hover-opacity" 
-           alt="View from our suite showing the restaurant " />
+           alt="View of the restaurant and main building from our suite" />
         </div>
         <div class="image-item">
           <img src="/media/IMG_0568 SanG.jpeg" onclick="onClick(this)" class="w3-hover-opacity" alt="" />
@@ -123,7 +149,7 @@ body, html {
         </div>
         <div class="image-item">
           <img src="/media/IMG_0571 SanG.jpeg" onclick="onClick(this)" class="w3-hover-opacity" 
-          alt="View from the highest tower in San Gimignano (Mormoraia is somewhere out there)" />
+          alt="Amazing View from the highest tower in San Gimignano (Lisa did not attempt the scary climb up this 600 year old tower)" />
         </div>
         <div class="image-item">
           <img src="/media/IMG_0546 Pizza.jpeg" onclick="onClick(this)" class="w3-hover-opacity" 
@@ -328,11 +354,13 @@ body, html {
     ea commodo consequat.
   </p>
 </div>
-<div class="bgvideo1 w3-display-container w3-opacity-min">
-  <video autoplay muted loop>
-  <source src="media/My Movie 4.mov" type="video/mp4">
+<div class="video-container">
+  <video autoplay muted>
+      <source src="media/My Movie 4.mov" type="video/mp4">
+      Your browser does not support the video tag.
   </video>
 </div>
+
 <div class="w3-content w3-container w3-padding-64" id="giro">
   <h3 class="w3-center">Maglia Rosa</h3>
   <p>We have created a fictional "personal" website/blog, Duis 
@@ -342,9 +370,10 @@ body, html {
     ea commodo consequat.
   </p>
 </div>
-<div class="bgvideo1 w3-display-container w3-opacity-min w3-padding-64">
+<div class="video-container">
   <video controls>
-    <source src="media/My Movie 3.mov" type="video/mp4">
+      <source src="media/My Movie 3.mov" type="video/mp4">
+      Your browser does not support the video tag.
   </video>
 </div>
 <div class="w3-content w3-container w3-padding-64" id="giro">
